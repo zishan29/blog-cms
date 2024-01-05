@@ -41,9 +41,11 @@ export default function Home() {
   }
 
   function checkToken() {
-    let token = localStorage.getItem('token');
-    if (token) {
-      return token;
+    if (typeof window !== 'undefined') {
+      const token = localStorage.getItem('token');
+      if (token) {
+        return token;
+      }
     }
     return;
   }

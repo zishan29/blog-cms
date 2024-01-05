@@ -15,7 +15,9 @@ export default function Add() {
   const router = useRouter();
 
   function logout() {
-    localStorage.clear();
+    if (typeof window !== 'undefined') {
+      localStorage.clear();
+    }
   }
 
   const handleCheckboxChange = (e) => {
@@ -28,7 +30,10 @@ export default function Add() {
       content: content,
       published: published,
     };
-    const token = localStorage.getItem('token');
+    let token = '';
+    if (typeof window !== 'undefined') {
+      token = localStorage.getItem('token');
+    }
     const bearer = `Bearer ${token}`;
     try {
       let res = await fetch(`https://zishan-blog-api.adaptable.app/posts`, {

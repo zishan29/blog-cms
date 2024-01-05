@@ -152,7 +152,10 @@ export default function Post() {
   };
 
   async function deleteComment(id) {
-    const token = localStorage.getItem('token');
+    let token = '';
+    if (typeof window !== 'undefined') {
+      token = localStorage.getItem('token');
+    }
     const bearer = `Bearer ${token}`;
     try {
       let res = await fetch(
@@ -198,7 +201,10 @@ export default function Post() {
       _id: post._id,
     };
     console.log(data);
-    const token = localStorage.getItem('token');
+    let token = '';
+    if (typeof window !== 'undefined') {
+      token = localStorage.getItem('token');
+    }
     const bearer = `Bearer ${token}`;
     try {
       let res = await fetch(
@@ -234,7 +240,10 @@ export default function Post() {
   }
 
   async function deletePost() {
-    const token = localStorage.getItem('token');
+    let token = '';
+    if (typeof window !== 'undefined') {
+      token = localStorage.getItem('token');
+    }
     const bearer = `Bearer ${token}`;
     try {
       let res = await fetch(
@@ -256,7 +265,9 @@ export default function Post() {
   }
 
   function logout() {
-    localStorage.clear();
+    if (typeof window !== 'undefined') {
+      localStorage.clear();
+    }
   }
 
   return (

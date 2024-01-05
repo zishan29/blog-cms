@@ -45,7 +45,9 @@ export default function Posts() {
   };
 
   function logout() {
-    localStorage.clear();
+    if (typeof window !== 'undefined') {
+      localStorage.clear();
+    }
   }
 
   return (
