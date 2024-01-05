@@ -1,6 +1,6 @@
 'use client';
 
-import Nav from '@/app/nav';
+import Nav from '../../nav';
 import { useRef, useState } from 'react';
 import styles from './add.module.css';
 import { useRouter } from 'next/navigation';
