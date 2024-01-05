@@ -1,0 +1,42 @@
+.nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  width: 100vw;
+  padding-right: 100px;
+  gap: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.link {
+  border: 1px solid black;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ffffff;
+  width: max-content;
+  padding: 3rem;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+}

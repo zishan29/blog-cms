@@ -1,0 +1,125 @@
+.nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  width: 100vw;
+  padding-right: 100px;
+  gap: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.link {
+  border: 1px solid black;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.link:hover {
+  background-color: black;
+  color: white;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 15px;
+  color: #9a9a9a;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 10px;
+  padding: 20px 50px;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 25px 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.loader {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+  margin-top: 50px;
+}
+
+.loader .circle {
+  --color: #333;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%,
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%,
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%,
+  75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%,
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
